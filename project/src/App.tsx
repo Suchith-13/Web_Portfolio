@@ -1,18 +1,35 @@
-import React from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code2, Database, Layout, Server, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Code2, Database, Layout, Server, ChevronDown, FileText } from 'lucide-react';
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Sticky Navbar */}
+      <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50 py-4">
+        <div className="container mx-auto px-6 flex justify-between items-center">
+          <h1 className="text-xl font-bold text-blue-600">Suchith Reddy Kunta</h1>
+          <div className="flex items-center space-x-6">
+            <span className="text-gray-700 font-semibold">📞 9440375111</span>
+            <a
+              href=""
+              download
+              className="bg-blue-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-blue-700 transition"
+            >
+              <FileText className="w-5 h-5" />
+              <span>Download Resume</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <header className="relative bg-gradient-to-r from-blue-600 to-indigo-700 text-white min-h-screen flex items-center">
+      <header className="relative bg-gradient-to-r from-blue-600 to-indigo-700 text-white min-h-screen flex items-center pt-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-6 py-24 relative">
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
             <div className="flex-1 text-center md:text-left">
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                 Hi, I'm <span className="text-blue-300">Suchith Reddy Kunta</span>
-                <br />Full Stack Developer
+                <br /> Full Stack Developer
               </h1>
               <p className="text-xl mb-8 text-blue-100 max-w-2xl">
                 Crafting exceptional digital experiences with modern technologies and a passion for clean, efficient code.
@@ -23,7 +40,7 @@ function App() {
                 </a>
                 <a href="#projects" className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-all transform hover:scale-105">
                   View Projects
-                </a>
+                  </a>
               </div>
             </div>
             <div className="relative">
@@ -196,5 +213,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
